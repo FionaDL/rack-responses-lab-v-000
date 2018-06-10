@@ -3,7 +3,6 @@
 class Application
   def call(env)
     resp = Rack::Response.new
-    binding.pry
     time = Time.now < 12
       if time.hour <= 12
         resp.write "Good Morning."
